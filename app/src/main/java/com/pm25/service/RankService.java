@@ -13,6 +13,6 @@ import retrofit.http.Query;
 public interface RankService {
 
     @GET("/api/querys/aqi_ranking.json")
-    Call<City[]> getRank(@Query("token") String token);
+    Call<List<City>> getRank(@Query("token") String token);
 
 }

@@ -9,16 +9,7 @@ import java.io.Serializable;
  */
 public class City implements Serializable{
 
-    //area  //quality   //time_point
 
-
-    //aqi   // pm2_5  //pm10
-
-
-    //co    //no2    //o3
-
-
-    //primary_pollutant
     @SerializedName("area")
     private String area;
     @SerializedName("quality")

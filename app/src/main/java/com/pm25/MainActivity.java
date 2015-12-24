@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
                 new int[] {R.id.ItemTitle,R.id.ItemText});
         list.setAdapter(adapter);
 
-        RankServiceClient.getInstance().requestRank(new Callback<City[]>() {
+        RankServiceClient.getInstance().requestRank(new Callback<List<City>>() {
             @Override
-            public void onResponse(Response<City[]> response, Retrofit retrofit) {
+            public void onResponse(Response<List<City>>response, Retrofit retrofit) {
                 showSuccessScreen(response, mainList);
             }
             @Override
@@ -50,35 +50,35 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void showSuccessScreen(Response<City[]> response, ArrayList arr) {
+    private void showSuccessScreen(Response<List<City>> response, ArrayList arr) {
         if (response != null) {
             populateTop(response.body(),arr,"Top 10");
             populateBottom(response.body(),arr,"Bottom 10");
             adapter.notifyDataSetChanged();
         }
     }
-    private void populateTop(City[] data, ArrayList arr, String title) {
+    private void populateTop(List<City> data, ArrayList arr, String title) {
         HashMap<String, String> mapTitle = new HashMap<String, String>();
         mapTitle.put("ItemTitle", title);
         arr.add(mapTitle);
         if (data != null) {
             for(int i=0;i<10;i++){
                 HashMap<String, String> mapText = new HashMap<String, String>();
-                mapText.put("ItemText", data[i].getArea()+" : "+data[i].getAqi());
+                mapText.put("ItemText", data.get(i).getArea()+" : "+data.get(i).getAqi());
                 arr.add(mapText);
             }
         }else{
             System.out.println("can't get data");
         }
     }
-    private void populateBottom(City[] data, ArrayList arr, String title) {
+    private void populateBottom(List<City> data, ArrayList arr, String title) {
         HashMap<String, String> mapTitle = new HashMap<String, String>();
         mapTitle.put("ItemTitle", title);
         arr.add(mapTitle);
         if (data != null) {
-            for(int i=data.length-1;i>data.length-10.;i--){
+            for(int i=data.size()-1;i>data.size()-10.;i--){
                 HashMap<String, String> mapText = new HashMap<String, String>();
-                mapText.put("ItemText", data[i].getArea()+" : "+data[i].getAqi());
+                mapText.put("ItemText", data.get(i).getArea()+" : "+data.get(i).getAqi());
                 arr.add(mapText);
             }
         }else{

@@ -13,9 +13,9 @@ import retrofit.Retrofit;
 
 public class RankServiceClient {
 
-    private static final String BASE_URL = "http://www.pm25.in";
-//    private static final String TOKEN = "4esfG6UEhGzNkbszfjAp";
-    private static final String TOKEN = "5j1znBVAsnSf5xQyNQyq";
+    private static final String BASE_URL = "http://www.pm25.in/api/querys/aqi_ranking.json";
+    private static final String TOKEN = "4esfG6UEhGzNkbszfjAp";
+   // private static final String TOKEN = "5j1znBVAsnSf5xQyNQyq";
 
     private static RankServiceClient instance;
     private final RankService rankService;
@@ -38,12 +38,12 @@ public class RankServiceClient {
         return instance;
     }
 
-    public void requestRank(Callback<City[]> callback) {
-        Call<City[]> call = rankService.getRank(TOKEN);
+    public void requestRank(Callback<List<City>> callback) {
+        Call<List<City>> call = rankService.getRank(TOKEN);
         enqueue(call, callback);
     }
 
-    private <T> void enqueue(Call<City[]> call, Callback<City[]> callback) {
+    private <T> void enqueue(Call<List<City>> call, Callback<List<City>> callback) {
         if (call != null && callback != null) {
             call.enqueue(callback);
         }
