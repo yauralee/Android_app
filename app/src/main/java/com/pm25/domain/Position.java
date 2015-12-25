@@ -4,23 +4,33 @@ package com.pm25.domain;
  * Created by root on 12/24/15.
  */
 public class Position {
+    //area
 
     //position_name
 
     //quality  //aqi
-    //pm2_5 //pm10
-    //co //no2
-    //o3 //so2
-    //primary_pollutant
+    //pm2_5   //pm10
+    //co     //no2
+    //o3     //so2
+
+    private String area;
     private String position_name;
     private String quality;
     private int aqi;
     private int pm2_5;
     private int pm10;
-    private int co;
+    private double co;
     private int no2;
     private int o3;
     private int so2;
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
 
     public String getPosition_name() {
         return position_name;
@@ -62,7 +72,7 @@ public class Position {
         this.pm10 = pm10;
     }
 
-    public int getCo() {
+    public double getCo() {
         return co;
     }
 

@@ -1,14 +1,16 @@
 package com.pm25;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.pm25.domain.City;
-import com.pm25.service.RankServiceClient;
+import com.pm25.service.rank.RankServiceClient;
 import com.thoughtworks.application.pm25_monitor.R;
 
 import java.util.ArrayList;
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<HashMap<String,String>> mainList=new ArrayList<HashMap<String, String>>();
     private ListView list;
     private SimpleAdapter adapter;
+    private EditText cityEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +33,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         View v = findViewById(R.id.mainAtys);
         v.getBackground().setAlpha(100);
+        cityEditText = (EditText)findViewById(R.id.inputCity);
         list= (ListView) findViewById(R.id.RankListView);
+
+
+
         adapter = new SimpleAdapter(this,mainList,R.layout.list_item_main,
                 new String[] {"ItemTitle", "ItemText"},
                 new int[] {R.id.ItemTitle,R.id.ItemText});
@@ -44,10 +51,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Throwable t) {
 
-                Log.e("msg","failure");
+                Log.e("msg","failure1");
                 t.printStackTrace();
             }
         });
+
+
+        findViewById(R.id.searchBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String inputCity = cityEditText.getText().toString();
+
+                Intent i = new Intent(MainActivity.this, CityInfoActivity.class);
+                i.putExtra("data", inputCity);
+                startActivity(i);
+            }
+        });
+
+
     }
 
     private void showSuccessScreen(Response<List<City>> response, ArrayList arr) {

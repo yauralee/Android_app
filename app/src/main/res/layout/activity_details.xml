@@ -13,86 +13,20 @@
     android:id="@+id/detailsAty"
     tools:context="com.pm25.DetailsActivity">
 
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/header">
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/cityName"
-            />
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/quality"/>
-    </LinearLayout>
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:id="@+id/cityName"/>
+    <LinearLayout
         android:layout_weight="1"
+        android:orientation="vertical"
+        android:id="@+id/positionContent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/time"
-        android:text="this is time stamp"/>
-    <LinearLayout
-        android:layout_weight="3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/contentLayer1">
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/aqiText"
-            />
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/pm25Text"/>
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/pm10Text"/>
+        android:layout_height="wrap_content">
+
     </LinearLayout>
-    <LinearLayout
-        android:layout_weight="3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/contentLayer2">
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/coText"
-            />
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/no2Text"/>
-        <TextView
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/o3Text"/>
-    </LinearLayout>
-    <Button
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="view monitoring sites"/>
 
 
 </LinearLayout>

@@ -23,6 +23,10 @@
         <activity
             android:name="com.pm25.DetailsActivity"
             android:label="@string/title_activity_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.pm25.CityInfoActivity"
+            android:label="@string/title_activity_city_info"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

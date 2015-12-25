@@ -1,9 +1,8 @@
-package com.pm25.service;
+package com.pm25.service.rank;
 
 import com.pm25.domain.City;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit.Call;

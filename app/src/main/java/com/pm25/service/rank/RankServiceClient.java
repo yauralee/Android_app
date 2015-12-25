@@ -1,4 +1,4 @@
-package com.pm25.service;
+package com.pm25.service.rank;
 
 import com.pm25.domain.City;
 import com.squareup.okhttp.OkHttpClient;
@@ -13,16 +13,18 @@ import retrofit.Retrofit;
 
 public class RankServiceClient {
 
-    private static final String BASE_URL = "http://www.pm25.in/api/querys/aqi_ranking.json";
-    private static final String TOKEN = "4esfG6UEhGzNkbszfjAp";
-   // private static final String TOKEN = "5j1znBVAsnSf5xQyNQyq";
+//    private static final String BASE_URL = "http://www.pm25.in/api/querys/aqi_ranking.json";
+    private static final String BASE_URL = "http://www.pm25.in";
+
+    //    private static final String TOKEN = "4esfG6UEhGzNkbszfjAp";
+    private static final String TOKEN = "5j1znBVAsnSf5xQyNQyq";
 
     private static RankServiceClient instance;
     private final RankService rankService;
 
     private RankServiceClient() {
         OkHttpClient okHttpClient = new OkHttpClient();
-        okHttpClient.setReadTimeout(20 * 1000, TimeUnit.MILLISECONDS);
+      //  okHttpClient.setReadTimeout(20 * 1000, TimeUnit.MILLISECONDS);
 
         Retrofit.Builder builder = new Retrofit.Builder();
         builder.baseUrl(BASE_URL);
