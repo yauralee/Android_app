@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <TextView
-            android:textColor="#569918"
+            android:textColor="#50AE1D"
             android:textSize="20pt"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_weight="1"
@@ -28,7 +28,7 @@
             android:id="@+id/city"
             android:text="this is city name"/>
         <TextView
-            android:textColor="#569918"
+            android:textColor="#50AE1D"
             android:textSize="15pt"
             android:layout_weight="1"
             android:layout_width="wrap_content"
@@ -54,7 +54,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/aqiInfo"
-            android:text="this is city aqi"/>
+            android:text="this is city aqi"
+            android:background="@drawable/bg"
+            />
         <TextView
             android:textColor="#FFFFFF"
             android:textSize="10pt"
@@ -65,7 +67,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/pm25Info"
-            android:text="this is city pm25"/>
+            android:text="this is city pm25"
+            android:background="@drawable/bg"
+            />
         <TextView
             android:textColor="#FFFFFF"
             android:textSize="10pt"
@@ -75,9 +79,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/pm10Info"
-            android:text="this is city pm10"/>
+            android:text="this is city pm10"
+            android:background="@drawable/bg"
+            />
     </LinearLayout>
     <LinearLayout
+        android:padding="@dimen/activity_vertical_margin"
         android:layout_gravity="center"
         android:layout_weight="1"
         android:id="@+id/infoLayer2"
@@ -94,7 +101,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/coInfo"
-            android:text="this is city co"/>
+            android:text="this is city co"
+            android:background="@drawable/bg"
+            />
         <TextView
             android:textColor="#FFFFFF"
             android:textSize="10pt"
@@ -105,7 +114,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/no2Info"
-            android:text="this is city no2"/>
+            android:text="this is city no2"
+            android:background="@drawable/bg"
+           />
         <TextView
             android:textColor="#FFFFFF"
             android:textSize="10pt"
@@ -115,7 +126,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/o3Info"
-            android:text="this is city o3"/>
+            android:text="this is city o3"
+            android:background="@drawable/bg"
+            />
     </LinearLayout>
     <Button
         android:layout_gravity="center"

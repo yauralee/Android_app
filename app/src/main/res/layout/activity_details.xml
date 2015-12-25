@@ -20,7 +20,7 @@
         android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:id="@+id/cityName"
         android:text="this is city name"
-        android:textColor="#569918"
+        android:textColor="#50AE1D"
         android:textSize="18pt"/>
     <LinearLayout
         android:layout_weight="1"

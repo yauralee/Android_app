@@ -13,8 +13,8 @@ import retrofit.Retrofit;
 
 public class RankServiceClient {
 
-//    private static final String BASE_URL = "http://www.pm25.in/api/querys/aqi_ranking.json";
-    private static final String BASE_URL = "http://www/.pm25.in";
+    private static final String BASE_URL = "http://www.pm25.in/api/querys/aqi_ranking.json";
+//    private static final String BASE_URL = "http://www.pm25.in";
 
     //    private static final String TOKEN = "4esfG6UEhGzNkbszfjAp";
     private static final String TOKEN = "5j1znBVAsnSf5xQyNQyq";

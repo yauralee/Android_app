@@ -61,12 +61,24 @@ public class CityInfoActivity extends AppCompatActivity {
         City city = list.get(list.size()-1);
         ((TextView)findViewById(R.id.city)).setText(city.getArea());
         ((TextView)findViewById(R.id.quality)).setText(city.getQuality());
-        ((TextView)findViewById(R.id.aqiInfo)).setText("AOI:"+Integer.toString(city.getAqi()));
-        ((TextView)findViewById(R.id.pm25Info)).setText("PM2.5:"+Integer.toString(city.getPm2_5()));
-        ((TextView)findViewById(R.id.pm10Info)).setText("PM10:"+Integer.toString(city.getPm10()));
-        ((TextView)findViewById(R.id.coInfo)).setText("CO:"+Double.toString(city.getCo()));
-        ((TextView)findViewById(R.id.no2Info)).setText("NO2:"+Integer.toString(city.getNo2()));
-        ((TextView)findViewById(R.id.o3Info)).setText("O3:"+Integer.toString(city.getO3()));
+        TextView tv2 = (TextView)findViewById(R.id.aqiInfo);
+        tv2.setText("AOI:"+Integer.toString(city.getAqi()));
+
+        TextView tv3 = (TextView)findViewById(R.id.pm25Info);
+        tv3.setText("PM2.5:"+Integer.toString(city.getPm2_5()));
+
+        TextView tv4 = (TextView)findViewById(R.id.pm10Info);
+        tv4.setText("PM10:"+Integer.toString(city.getPm10()));
+
+        TextView tv5 = (TextView)findViewById(R.id.coInfo);
+        tv5.setText("CO:"+Double.toString(city.getCo()));
+
+        TextView tv6 = (TextView)findViewById(R.id.no2Info);
+        tv6.setText("NO2:"+Integer.toString(city.getNo2()));
+
+        TextView tv7 = (TextView)findViewById(R.id.o3Info);
+        tv7.setText("O3:"+Integer.toString(city.getO3()));
+
 
 
 
