@@ -29,6 +29,8 @@ public class CityInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_city_info);
+        View v = findViewById(R.id.cityInfo);
+        v.getBackground().setAlpha(100);
         Intent i1 = getIntent();
         String searchCity = i1.getStringExtra("data");
         CityInfoServiceClient.getInstance().requestCityInfo(searchCity,new Callback<List<City>>() {
@@ -59,12 +61,12 @@ public class CityInfoActivity extends AppCompatActivity {
         City city = list.get(list.size()-1);
         ((TextView)findViewById(R.id.city)).setText(city.getArea());
         ((TextView)findViewById(R.id.quality)).setText(city.getQuality());
-        ((TextView)findViewById(R.id.aqiInfo)).setText(Integer.toString(city.getAqi()));
-        ((TextView)findViewById(R.id.pm25Info)).setText(Integer.toString(city.getPm2_5()));
-        ((TextView)findViewById(R.id.pm10Info)).setText(Integer.toString(city.getPm10()));
-        ((TextView)findViewById(R.id.coInfo)).setText(Double.toString(city.getCo()));
-        ((TextView)findViewById(R.id.no2Info)).setText(Integer.toString(city.getNo2()));
-        ((TextView)findViewById(R.id.o3Info)).setText(Integer.toString(city.getO3()));
+        ((TextView)findViewById(R.id.aqiInfo)).setText("AOI:"+Integer.toString(city.getAqi()));
+        ((TextView)findViewById(R.id.pm25Info)).setText("PM2.5:"+Integer.toString(city.getPm2_5()));
+        ((TextView)findViewById(R.id.pm10Info)).setText("PM10:"+Integer.toString(city.getPm10()));
+        ((TextView)findViewById(R.id.coInfo)).setText("CO:"+Double.toString(city.getCo()));
+        ((TextView)findViewById(R.id.no2Info)).setText("NO2:"+Integer.toString(city.getNo2()));
+        ((TextView)findViewById(R.id.o3Info)).setText("O3:"+Integer.toString(city.getO3()));
 
 
 
